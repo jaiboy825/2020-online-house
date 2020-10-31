@@ -1,0 +1,239 @@
+<?php
+require_once("db.php");
+?>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/a.css">
+    <link rel="stylesheet" href="fontawesome/css/font-awesome.css">
+</head>
+
+<body>
+    <header>
+
+        <div class="mainHeader">
+            <div class="logo">
+                <a href="#"><img src="resources/img/logo.png" alt="logo" title="logo" class="logo"></a>
+            </div>
+            <!-- 메뉴 -->
+            <div class="menus">
+                <a href="index.php" class="menu">홈</a>
+                <a href="#" class="menu">온라인 집들이</a>
+                <a href="#" class="menu">스토어</a>
+                <a href="#" class="menu">전문가</a>
+                <a href="#" class="menu">시공 견적</a>
+            </div>
+            <!-- 로그인 회원가입 -->
+            <div class="lr">
+
+                <a href="login.php">
+                    <div class="login">로그인</div>
+                </a>
+                <a href="register.php">
+                    <div class="register">회원가입</div>
+                </a>
+            </div>
+        </div>
+    </header>
+    <section id="visual">
+        <div class="mainContainer">
+            <div class="main">
+                <input type="radio" class="slide_active_1 slide_input" name="slide" id="slide1" checked>
+                <input type="radio" class="slide_active_2 slide_input" name="slide" id="slide2">
+                <input type="radio" class="slide_active_3 slide_input" name="slide" id="slide3">
+                <input type="radio" class="slide_active_4 slide_input" name="slide" id="slide4">
+                <div class="visual_slide_box">
+                    <div class="img_container">
+                        <img src="resources/img/slider1.jpg" alt="사진1" class="sliderImg" title="사진">
+                        <img src="resources/img/slider2.jpg" alt="사진2" class="sliderImg" title="사진">
+                        <img src="resources/img/slider3.jpg" alt="사진3" class="sliderImg" title="사진">
+                    </div>
+                </div>
+                <div class="controller">
+                    <label for="slide2" class="left" data-idx="1"><i class="fa fa-angle-left"></i></label>
+                    <label for="slide3" class="left" data-idx="2"><i class="fa fa-angle-left"></i></label>
+                    <label for="slide4" class="left" data-idx="3"><i class="fa fa-angle-left"></i></label>
+                    <label for="slide1" class="left" data-idx="4"><i class="fa fa-angle-left"></i></label>
+
+
+                    <label for="slide2" class="right" data-idx="1"><i class="fa fa-angle-right"></i></label>
+                    <label for="slide3" class="right" data-idx="2"><i class="fa fa-angle-right"></i></label>
+                    <label for="slide4" class="right" data-idx="3"><i class="fa fa-angle-right"></i></label>
+                    <label for="slide1" class="right" data-idx="4"><i class="fa fa-angle-right"></i></label>
+
+                </div>
+            </div>
+
+            <!-- 온라인 집들이 -->
+            <div class="onlineContainer">
+                <div class="online">
+                    <div class="onlineHead">
+                        <h1>온라인 집들이</h1>
+                        <p>엄청난 작업을 통하여 만들어진 개성있는 집에 방문해보세요.</p>
+                    </div>
+                    <!-- 온라인 집들이 -->
+                    <div class="onlineMain">
+                        <div class="case">
+                            <div class="caseInfo">
+                                <h2>작성자 아이디 : user1</h2>
+                                <div class="star">★★★★☆(4.0)</div>
+                                <div class="more">더 알아보기</div>
+                            </div>
+                            <div class="caseImgContainer">
+                                <img src="resources/housewarming_party/1_before.jpg" alt="케이스1전" class="before"
+                                    title="사진">
+                                <img src="resources/housewarming_party/1_after.jpg" alt="케이스1후" class="after"
+                                    title="사진">
+                            </div>
+                        </div>
+                        <div class="case">
+                            <div class="caseInfo">
+                                <h2>작성자 아이디 : user1</h2>
+                                <div class="star">★★★★★(5.0)</div>
+                                <div class="more">더 알아보기</div>
+                            </div>
+                            <div class="caseImgContainer">
+                                <img src="resources/housewarming_party/3_before.jpg" alt="케이스2전" class="before"
+                                    title="사진">
+                                <img src="resources/housewarming_party/3_after.jpg" alt="케이스2후" class="after"
+                                    title="사진">
+                            </div>
+                        </div>
+
+                        <div class="case">
+                            <div class="caseInfo">
+                                <h2>작성자 아이디 : user1</h2>
+                                <div class="star">★★☆☆☆(2.0)</div>
+                                <div class="more">더 알아보기</div>
+                            </div>
+                            <div class="caseImgContainer">
+                                <img src="resources/housewarming_party/4_before.jpg" alt="케이스3전" class="before"
+                                    title="사진">
+                                <img src="resources/housewarming_party/4_after.jpg" alt="케이스3후" class="after"
+                                    title="사진">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- 전문가 -->
+            <div class="specialContainer">
+                <div class="special">
+                    <div class="speHead">
+                        <h1>Team Tout Maison (TTM)</h1>
+                        <br>
+                        <p><b>세계 최고 수준</b>의 전문가들을 영입하여 최상의 서비스를 제공합니다.</p>
+                        <div class="teamMore">전문가 더 보기</div>
+                    </div>
+                    <!-- 전문가 -->
+                    <div class="speMain">
+                        <div class="card">
+                            <div class="front">
+                                <img src="resources/specialist/specialist1.jpg" alt="사진" title="사진">
+                            </div>
+                            <div class="back">
+                                <div class="speInfo">
+                                    <h2>전문가1</h2>
+                                    <h3>id : specialist1</h3>
+                                    <div class="more">자세히 보기</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="front">
+                                <img src="resources/specialist/specialist2.jpg" alt="사진" title="사진">
+                            </div>
+                            <div class="back">
+                                <div class="speInfo">
+                                    <h2>전문가2</h2>
+                                    <h3>id : specialist2</h3>
+                                    <div class="more">자세히 보기</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="front">
+                                <img src="resources/specialist/specialist3.jpg" alt="사진" title="사진">
+                            </div>
+                            <div class="back">
+                                <div class="speInfo">
+                                    <h2>전문가3</h2>
+                                    <h3>id : specialist3</h3>
+                                    <div class="more">자세히 보기</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="front">
+                                <img src="resources/specialist/specialist4.jpg" alt="사진" title="사진">
+                            </div>
+                            <div class="back">
+                                <div class="speInfo">
+                                    <h2>전문가4</h2>
+                                    <h3>id : specialist4</h3>
+                                    <div class="more">자세히 보기</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- 후기 -->
+            <div class="reviewContainer">
+                <div class="review">
+                    <div class="reviewHead">
+                        <h1>Review (리뷰)</h1>
+                        <br>
+                        <p>현재까지 <b>82503</b>명의 회원님들과 함께 하고 있습니다.</p>
+
+                    </div>
+                    <div class="reviewMain">
+                        <!-- 후기1 -->
+                        <div class="rev">
+                            <img src="resources/img/r1.jpg" alt="사진" class="rimg" title="사진">
+                            <div class="peo">
+                                <div class="peom">
+                                    <h2>박재현(park)</h2>
+                                    <p>원하던 아이언맨 컨셉으로 너무 잘 꾸며주셨습니다!</p>
+                                    <p>비용 : 3,200,000</p>
+                                    <p>평점 : ★★★★☆</p>
+                                </div>
+                            </div>
+                            <div class="sp">
+                                <p>전문가 이름 : 전문가2</p>
+                                <p>전문가 아이디 : specialist2</p>
+                            </div>
+                            <div class="morem">자세히 보기</div>
+                        </div>
+                        <!-- 후기2 -->
+                        <div class="rev">
+                            <img src="resources/img/r2.jpg" alt="사진" class="rimg" title="사진">
+                            <div class="peo">
+                                <div class="peom">
+                                    <h2>작성자 이름 : 김정수(kim)</h2>
+                                    <p>요구사항대로 부드러운 느낌을 잘 살려주셨습니다.</p>
+                                    <p>비용 : 5,500,000</p>
+                                    <p>평점 : ★★★★☆</p>
+                                </div>
+                            </div>
+                            <div class="sp">
+                                <p>전문가 이름 : 전문가4</p>
+                                <p>전문가 아이디 : specialist4</p>
+                            </div>
+                            <div class="morem">자세히 보기</div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+    </section>
+    <footer>Copyright (C) 2020 by MyHome Inc All Rights Reserved.</footer>
+</body>
+
+</html>

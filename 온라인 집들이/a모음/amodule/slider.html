@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/slider.css">
+    <link rel="stylesheet" href="fontawesome/css/font-awesome.css">
+</head>
+
+<body>
+    <div class="mainContainer">
+        <div class="main">
+            <input type="radio" name="active" id="active1" class="active1 slide_input" checked>
+            <input type="radio" name="active" id="active2" class="active2 slide_input">
+            <input type="radio" name="active" id="active3" class="active3 slide_input">
+            <input type="radio" name="active" id="active4" class="active4 slide_input">
+            <div class="view_box">
+                <div class="slider">
+                    <img src="resources/img/slider1.jpg" alt="사진1" class="sliderImg" title="사진">
+                    <img src="resources/img/slider2.jpg" alt="사진2" class="sliderImg" title="사진">
+                    <img src="resources/img/slider3.jpg" alt="사진3" class="sliderImg" title="사진">
+                </div>
+            </div>
+            <div class="controller">
+                <label for="active2" class="left" data-idx="1"><i class="fa fa-angle-left"></i></label>
+                <label for="active3" class="left" data-idx="2"><i class="fa fa-angle-left"></i></label>
+                <label for="active4" class="left" data-idx="3"><i class="fa fa-angle-left"></i></label>
+                <label for="active1" class="left" data-idx="4"><i class="fa fa-angle-left"></i></label>
+
+                <label for="active2" class="right" data-idx="1"><i class="fa fa-angle-right"></i></label>
+                <label for="active3" class="right" data-idx="2"><i class="fa fa-angle-right"></i></label>
+                <label for="active4" class="right" data-idx="3"><i class="fa fa-angle-right"></i></label>
+                <label for="active1" class="right" data-idx="4"><i class="fa fa-angle-right"></i></label>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

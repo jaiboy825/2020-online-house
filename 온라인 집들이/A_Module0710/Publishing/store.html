@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>내집꾸미기</title>
+    <link rel="stylesheet" href="resources/store.css">
+    <script src="./resources/jquery-3.4.1.min.js"></script>
+    <script src="./store.js"></script>
+    <script src="resources/jquery-ui.js"></script>
+</head>
+
+<body>
+    <div class="Container">
+        <header>
+            <div class="logo"><a href="#"><img src="resources/img/logo.png" alt="내 집 꾸미기" title="내 집 꾸미기"></a></div>
+            <!-- 메뉴 -->
+            <div class="menu">
+                <!-- 로그인 및 회원가입 -->
+                <a class="menust" href="Index.html">Home</a>
+                <a class="menust" href="#">Login</a>
+                <a class="menust" href="#">Register</a>
+                <a class="menust" href="#">Online <br> HouseWarming</a>
+                <a class="menust" href="store.html">store</a>
+                <a class="menust" href="#">Specialist</a>
+                <a class="menust" href="#">Construction<br>Estimate</a>
+            </div>
+        </header>
+        <!-- 메인 화면 -->
+        <div class="StoreTitle">
+            <i class="fa fa-bars"></i>
+            <div>Store</div>
+        </div>
+        <div class="StoreCenter">
+            <div class="productContainer">
+
+            </div>
+            <div class="Cart">
+                <input type="text" class="Search" placeholder="검색">
+                <div class="Goal">여기에 상품을 넣어주세요.</div>
+                <div class="totalContainer">
+                    <p>총합계</p>
+                    <span class="allTotal">0원</span>
+                </div>
+                <div class="buy">구매하기</div>
+                <div class="carts">
+
+                </div>
+                <div class="allPrice">
+                </div>
+            </div>
+
+        </div>
+        <div class="BuyContainer"></div>
+        <div class="Buying">
+            <div class="buyInput">
+                <p>이름</p>
+                <input type="text" class="buyName" placeholder="이름을 적어 주세요.">
+            </div>
+            <div class="buyInput bi2">
+                <p>주소</p>
+                <input type="text" class="buyAddress" placeholder="주소를 적어주세요.">
+            </div>
+            <div class="buyBtn">구매 완료</div>
+        </div>
+        <div class="final">
+        </div>
+        <footer>
+            Copyright (C) 2020 by MyHome Inc All Rights Reserved.
+        </footer>
+    </div>
+</body>
+
+</html>

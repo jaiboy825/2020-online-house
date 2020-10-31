@@ -1,0 +1,751 @@
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+}
+/* 슬라이더 */
+@keyframes slide{
+  0%{
+    left: 0%;
+  }
+  20% {
+    left: 0%;
+  }
+  25%{
+    left: 0%
+  }
+  40%{
+    left: -100%;
+  }
+  45% {
+    left:  -100%;
+  }
+  60%{
+    left : -200%;
+  }
+  65%{
+    left: -200%;
+  }
+  80%{
+    left : -100%;
+  }
+  85%{
+    left: -100%;
+  }
+  100%{
+    left : 0%;
+  }
+}
+@media (min-width: 1600px) {
+  /* 헤더 */
+  header {
+    position: relative;
+    width: 100%;
+    height: 100px;
+    border-bottom: 3px solid #212121;
+  }
+  .mainHeader {
+    width: 80%;
+    margin: 0 auto;
+    height: 100%;
+    position: relative;
+    display: flex;
+  }
+  .logo {
+    width: 100px;
+    height: 100px;
+  }
+  /* 메뉴 */
+  .menus {
+    width: calc(100% - 100px - 200px);
+    margin: 0 auto;
+    height: 100px;
+    display: grid;
+    grid-template-columns: 150px 150px 150px 150px 150px;
+    justify-content: space-around;
+    text-align: center;
+    transition: 0.3s;
+    color: #212121;
+  }
+  .menu:hover {
+    padding-top: 20px;
+  }
+  .menu {
+    transition: 0.3s;
+    padding-top: 30px;
+    color: #212121;
+  }
+  .lr {
+    background-color: #212121;
+    color: white;
+    width: 200px;
+    height: 100px;
+    display: grid;
+    grid-template-columns: 200px;
+    grid-template-rows: 50px;
+    line-height: 50px;
+    text-align: center;
+  }
+  .login,
+  .register {
+    cursor: pointer;
+  }
+  .login {
+    border-bottom: 1px solid white;
+  }
+  /* 슬라이더 */
+  .mainContainer {
+    width: 100%;
+    height: 500px;
+    background-color: #f1f1f1;
+    position: relative;
+  }
+  .main {
+    padding-top: 100px;
+    width: 80%;
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+  }
+  .imgView {
+    position: relative;
+    width: 500px;
+    height: 50%;
+    overflow: hidden;
+  }
+  .imgContainer{
+    position: relative;
+    display: flex;
+    width: 301%;
+    height: 100%;
+    animation: 15s slide ease-in-out infinite;
+  }
+  .sliderImg{
+    width: 500px;
+    height: 100%;
+  }
+  .mainMent {
+    border-radius: 10px;
+    padding: 20px;
+    height: 400px;
+    margin-left: 50px;
+  }
+  .hr {
+    border-bottom: 5px solid #212121;
+  }
+  /* 온라인 집들이 */
+  .onlineContainer{
+    width: 100%;
+    height: 800px;
+    background-color: #212121;
+    position: relative;
+  }
+
+  .online{
+    position: relative;
+    margin: 0 auto;
+    width: 80%;
+    height: 100%;
+  }
+  .onlineHead{
+    padding-top: 10px;
+    width: 100%;
+    height: 100px;
+    color: white;
+  }
+  /* 집들이 카드 */
+  .onlineMain{
+    position: absolute;
+    width: 100%;
+    height: calc(100% - 100px);
+    display: grid;
+    grid-template-columns: 390px 390px 390px;
+    grid-template-rows: 600px;
+    justify-content: space-around;
+  }
+  .case{
+    position: relative;
+    z-index: 5;
+    background-color: #f1f1f1;
+    border-radius: 10px;
+  }
+  .caseImgContainer{
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    height: 600px;
+    overflow: hidden;
+    border-radius: 10px;
+  }
+  .before{
+    position: absolute;
+    z-index: 1;
+    width: 390px;
+    height: 600px;
+  }
+  .after{
+    position: absolute;
+    z-index: 2;
+    width: 390px;
+    height: 600px;
+    left: 100%;
+    transition: 0.5s;
+  }
+  .case:hover .after{
+    left: 0px;
+  }
+  /* 집들이 정보 */
+  .caseInfo{
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 390px;
+    height: 20%;
+    bottom: 5%;
+    z-index: 3;
+    color: white;
+    text-align: center;
+    padding-top: 30px;
+  }
+  .more{
+    margin: 5px;
+    right: 0;
+    bottom: 0;
+    position: absolute;
+    cursor: pointer;
+  }
+  .star{
+    margin-top: 10px;
+  }
+
+  /* 전문가 영역 */
+  .specialContainer{
+    width: 100%;
+    height: 700px;
+    background-color: #f1f1f1;
+    position: relative;
+  }
+
+  .special{
+    position: relative;
+    width: 80%;
+    height: 100%;
+    margin: 0 auto;
+  }
+  .speHead{
+    width: 100%;
+    height: 100px;
+    padding-top: 10px;
+  }
+  .speMain{
+    padding-top: 50px;
+    width: 100%;
+    height: 500px;
+    display: grid;
+    grid-template-columns: 300px 300px 300px 300px;
+    grid-template-rows: 400px;
+    justify-content: space-around;
+  }
+  .card{
+    perspective: 1000px;
+    transition: 0.3s;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    border-radius: 10px;
+  }
+  .front{
+    transition: 0.7s;
+
+    position: absolute;
+    z-index: 2;
+    border-radius: 10px;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+  }
+  .front> img{
+    width: 100%;
+    height: 100%;
+  }
+  .back{
+    transition: 0.7s;
+    border-radius: 10px;
+    position: absolute;
+    z-index: 1;
+    height: 100%;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    backface-visibility: hidden;
+    transform: rotateY(-180deg);
+    color: white;
+  }
+  .card:hover .back{
+    z-index: 2;
+    transform: rotateY(0deg);
+  }
+  .card:hover .front{
+    z-index: 1;
+    transform: rotateY(180deg);
+  }
+  .speInfo{
+    width: 100%;
+    text-align: center;
+    padding-top: 100px;
+    line-height: 50px;
+  }
+  .teamMore{
+    margin-right: 40px;
+    line-height: 50px;
+    border-radius: 10px;
+    text-align: center;
+    width: 200px;
+    height: 50px;
+    border: 2px solid #212121;
+    cursor: pointer;
+    float: right;
+    color: white;
+    background-color: #212121
+  }
+
+  /* 후기 영역 */
+  .reviewContainer{
+    width: 100%;
+    height: 670px;
+    background-color: #f1f1f1;
+    position: relative;
+  }
+  .moreh{
+    float: right;
+  }
+  .review{
+    width: 80%;
+    height: 100%;
+    margin: 0 auto;
+  }
+  .reviewHead{
+    width: 100%;
+    height: 100px;
+    border-bottom: 3px solid #212121;
+  }
+  .reviewMain{
+    padding-top: 10px;
+    width: 100%;
+    height: calc(100% - 100px);
+    display: grid;
+    grid-template-columns: 48% 48%;
+    grid-template-rows: 500px;
+    justify-content: space-between;
+  }
+  .rev{
+    position: relative;
+    background-color: white;
+    border-radius: 10px;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    border: 2px solid #212121;
+  }
+  .rimg{
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    position: absolute;
+  }
+  .peo{
+    z-index: 2;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    line-height: 40px;
+    padding-left: 50px;
+  }
+  .peom{
+    position: absolute;
+    bottom: 150px;
+  }
+  .sp{
+    position: absolute;
+    z-index: 3;
+    color: white;
+    bottom: 10px;
+    right: 10px;
+  }
+  .morem{
+    position: absolute;
+    z-index: 3;
+    color: white;
+    cursor: pointer;
+    right: 10px;;
+    top: 10px;
+  }
+
+  /* 푸터 */
+  footer{
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+    color: white;
+    text-align: center;
+    background-color: #212121;
+  }
+}
+@media(max-width : 480px ){
+  /* 헤더 */
+  header {
+    position: relative;
+    width: 100%;
+    height: 100px;
+    border-bottom: 3px solid #212121;
+  }
+  .mainHeader {
+    width: 80%;
+    margin: 0 auto;
+    height: 100%;
+    position: relative;
+    display: flex;
+  }
+  .logo {
+    width: 100px;
+    height: 100px;
+  }
+  /* 메뉴 */
+  .menus {
+    display: none;
+    width: calc(100% - 100px - 200px);
+    margin: 0 auto;
+    height: 100px;
+    display: grid;
+    grid-template-columns: 150px 150px 150px 150px 150px;
+    justify-content: space-around;
+    text-align: center;
+    transition: 0.3s;
+    color: #212121;
+  }
+  .menu:hover {
+    padding-top: 20px;
+  }
+  .menu {
+    transition: 0.3s;
+    padding-top: 30px;
+    color: #212121;
+  }
+  .lr {
+    background-color: #212121;
+    color: white;
+    width: 200px;
+    height: 100px;
+    display: grid;
+    grid-template-columns: 200px;
+    grid-template-rows: 50px;
+    line-height: 50px;
+    text-align: center;
+  }
+  .login,
+  .register {
+    cursor: pointer;
+  }
+  .login {
+    border-bottom: 1px solid white;
+  }
+  /* 슬라이더 */
+  .mainContainer {
+    width: 100%;
+    height: 500px;
+    background-color: #f1f1f1;
+    position: relative;
+  }
+  .main {
+    padding-top: 100px;
+    width: 80%;
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+  }
+  .imgView {
+    position: relative;
+    width: 500px;
+    height: 50%;
+    overflow: hidden;
+  }
+  .imgContainer{
+    position: relative;
+    display: flex;
+    width: 301%;
+    height: 100%;
+    animation: 15s slide ease-in-out infinite;
+  }
+  .sliderImg{
+    width: 500px;
+    height: 100%;
+  }
+  .mainMent {
+    border-radius: 10px;
+    padding: 20px;
+    height: 400px;
+    margin-left: 50px;
+  }
+  .hr {
+    border-bottom: 5px solid #212121;
+  }
+  /* 온라인 집들이 */
+  .onlineContainer{
+    width: 100%;
+    height: 800px;
+    background-color: #212121;
+    position: relative;
+  }
+
+  .online{
+    position: relative;
+    margin: 0 auto;
+    width: 80%;
+    height: 100%;
+  }
+  .onlineHead{
+    padding-top: 10px;
+    width: 100%;
+    height: 100px;
+    color: white;
+  }
+  /* 집들이 카드 */
+  .onlineMain{
+    position: absolute;
+    width: 100%;
+    height: calc(100% - 100px);
+    display: grid;
+    grid-template-columns: 390px 390px 390px;
+    grid-template-rows: 600px;
+    justify-content: space-around;
+  }
+  .case{
+    position: relative;
+    z-index: 5;
+    background-color: #f1f1f1;
+    border-radius: 10px;
+  }
+  .caseImgContainer{
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    height: 600px;
+    overflow: hidden;
+    border-radius: 10px;
+  }
+  .before{
+    position: absolute;
+    z-index: 1;
+    width: 390px;
+    height: 600px;
+  }
+  .after{
+    position: absolute;
+    z-index: 2;
+    width: 390px;
+    height: 600px;
+    left: 100%;
+    transition: 0.5s;
+  }
+  .case:hover .after{
+    left: 0px;
+  }
+  /* 집들이 정보 */
+  .caseInfo{
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 390px;
+    height: 20%;
+    bottom: 5%;
+    z-index: 3;
+    color: white;
+    text-align: center;
+    padding-top: 30px;
+  }
+  .more{
+    margin: 5px;
+    right: 0;
+    bottom: 0;
+    position: absolute;
+    cursor: pointer;
+  }
+  .star{
+    margin-top: 10px;
+  }
+
+  /* 전문가 영역 */
+  .specialContainer{
+    width: 100%;
+    height: 700px;
+    background-color: #f1f1f1;
+    position: relative;
+  }
+
+  .special{
+    position: relative;
+    width: 80%;
+    height: 100%;
+    margin: 0 auto;
+  }
+  .speHead{
+    width: 100%;
+    height: 100px;
+    padding-top: 10px;
+  }
+  .speMain{
+    padding-top: 50px;
+    width: 100%;
+    height: 500px;
+    display: grid;
+    grid-template-columns: 300px 300px 300px 300px;
+    grid-template-rows: 400px;
+    justify-content: space-around;
+  }
+  .card{
+    perspective: 1000px;
+    transition: 0.3s;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    border-radius: 10px;
+  }
+  .front{
+    transition: 0.7s;
+
+    position: absolute;
+    z-index: 2;
+    border-radius: 10px;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+  }
+  .front> img{
+    width: 100%;
+    height: 100%;
+  }
+  .back{
+    transition: 0.7s;
+    border-radius: 10px;
+    position: absolute;
+    z-index: 1;
+    height: 100%;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    backface-visibility: hidden;
+    transform: rotateY(-180deg);
+    color: white;
+  }
+  .card:hover .back{
+    z-index: 2;
+    transform: rotateY(0deg);
+  }
+  .card:hover .front{
+    z-index: 1;
+    transform: rotateY(180deg);
+  }
+  .speInfo{
+    width: 100%;
+    text-align: center;
+    padding-top: 100px;
+    line-height: 50px;
+  }
+  .teamMore{
+    margin-right: 40px;
+    line-height: 50px;
+    border-radius: 10px;
+    text-align: center;
+    width: 200px;
+    height: 50px;
+    border: 2px solid #212121;
+    cursor: pointer;
+    float: right;
+    color: white;
+    background-color: #212121
+  }
+
+  /* 후기 영역 */
+  .reviewContainer{
+    width: 100%;
+    height: 670px;
+    background-color: #f1f1f1;
+    position: relative;
+  }
+  .moreh{
+    float: right;
+  }
+  .review{
+    width: 80%;
+    height: 100%;
+    margin: 0 auto;
+  }
+  .reviewHead{
+    width: 100%;
+    height: 100px;
+    border-bottom: 3px solid #212121;
+  }
+  .reviewMain{
+    padding-top: 10px;
+    width: 100%;
+    height: calc(100% - 100px);
+    display: grid;
+    grid-template-columns: 48% 48%;
+    grid-template-rows: 500px;
+    justify-content: space-between;
+  }
+  .rev{
+    position: relative;
+    background-color: white;
+    border-radius: 10px;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    border: 2px solid #212121;
+  }
+  .rimg{
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    position: absolute;
+  }
+  .peo{
+    z-index: 2;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    line-height: 40px;
+    padding-left: 50px;
+  }
+  .peom{
+    position: absolute;
+    bottom: 150px;
+  }
+  .sp{
+    position: absolute;
+    z-index: 3;
+    color: white;
+    bottom: 10px;
+    right: 10px;
+  }
+  .morem{
+    position: absolute;
+    z-index: 3;
+    color: white;
+    cursor: pointer;
+    right: 10px;;
+    top: 10px;
+  }
+
+  /* 푸터 */
+  footer{
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+    color: white;
+    text-align: center;
+    background-color: #212121;
+  }
+}

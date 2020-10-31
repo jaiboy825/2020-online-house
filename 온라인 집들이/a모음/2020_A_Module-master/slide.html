@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .visual_slide_box {
+        width: 600px;
+        height: 430px;
+        position: relative;
+        overflow: hidden;
+        left: 600px;
+    }
+
+    .img_container {
+        width: 300%;
+        height: 100%;
+        display: flex;
+        justify-content: space-between;
+        position: absolute;
+    }
+
+    .img_container>img {
+        width: calc(100% / 3);
+        height: 100%;
+    }
+
+    label {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 50px;
+        background-color: #fff;
+        text-align: center;
+        border: 1px solid #000;
+    }
+
+    .left {
+        left: 20px;
+    }
+
+    .right {
+        right: 20px;
+    }
+
+    .img_container {
+        animation-duration: 8s;
+        animation-iteration-count: infinite;
+        animation-delay: calc(-8s + 0.4s);
+    }
+
+    .slide_active_1:checked~.visual_slide_box .img_container {
+        animation-name: slide1;
+    }
+
+    .slide_active_2:checked~.visual_slide_box .img_container {
+        animation-name: slide2;
+    }
+
+    .slide_active_3:checked~.visual_slide_box .img_container {
+        animation-name: slide3;
+    }
+
+    .slide_active_4:checked~.visual_slide_box .img_container {
+        animation-name: slide4;
+    }
+
+    @keyframes slide1 {
+        000% {
+            left: -000%;
+        }
+
+        020% {
+            left: -000%;
+        }
+
+        025% {
+            left: -100%;
+        }
+
+        045% {
+            left: -100%;
+        }
+
+        050% {
+            left: -200%;
+        }
+
+        070% {
+            left: -200%;
+        }
+
+        075% {
+            left: -100%;
+        }
+
+        095% {
+            left: -100%;
+        }
+
+        100% {
+            left: -000%;
+        }
+
+    }
+
+    @keyframes slide2 {
+        000% {
+            left: -100%;
+        }
+
+        020% {
+            left: -100%;
+        }
+
+        025% {
+            left: -200%;
+        }
+
+        045% {
+            left: -200%;
+        }
+
+        050% {
+            left: -100%;
+        }
+
+        070% {
+            left: -100%;
+        }
+
+        075% {
+            left: -000%;
+        }
+
+        095% {
+            left: -000%;
+        }
+
+        100% {
+            left: -100%;
+        }
+
+    }
+
+    @keyframes slide3 {
+        000% {
+            left: -200%;
+        }
+
+        020% {
+            left: -200%;
+        }
+
+        025% {
+            left: -100%;
+        }
+
+        045% {
+            left: -100%;
+        }
+
+        050% {
+            left: -000%;
+        }
+
+        070% {
+            left: -000%;
+        }
+
+        075% {
+            left: -100%;
+        }
+
+        095% {
+            left: -100%;
+        }
+
+        100% {
+            left: -200%;
+        }
+
+    }
+
+    @keyframes slide4 {
+        000% {
+            left: -100%;
+        }
+
+        020% {
+            left: -100%;
+        }
+
+        025% {
+            left: -000%;
+        }
+
+        045% {
+            left: -000%;
+        }
+
+        050% {
+            left: -100%;
+        }
+
+        070% {
+            left: -100%;
+        }
+
+        075% {
+            left: -200%;
+        }
+
+        095% {
+            left: -200%;
+        }
+
+        100% {
+            left: -100%;
+        }
+
+    }
+</style>
+
+<body>
+    <input type="radio" class="slide_active_1" name="slide" id="slide1" checked>
+    <input type="radio" class="slide_active_2" name="slide" id="slide2">
+    <input type="radio" class="slide_active_3" name="slide" id="slide3">
+    <input type="radio" class="slide_active_4" name="slide" id="slide4">
+
+    <div class="visual_slide_box">
+        <div class="img_container">
+            <img src="사진/apartment-lounge-3147892_1920.jpg" alt="">
+            <img src="사진/baby-boy-3368016.jpg" alt="">
+            <img src="사진/brick-wall-1834784_1920.jpg" alt="">
+        </div>
+    </div>
+    <div class="controller">
+        <label for="slide2" class="left" data-idx="1">왼쪽</label>
+        <label for="slide3" class="left" data-idx="2">왼쪽</label>
+        <label for="slide4" class="left" data-idx="3">왼쪽</label>
+        <label for="slide1" class="left" data-idx="4">왼쪽</label>
+
+
+        <label for="slide2" class="right" data-idx="1">오른쪽</label>
+        <label for="slide3" class="right" data-idx="2">오른쪽</label>
+        <label for="slide4" class="right" data-idx="3">오른쪽</label>
+        <label for="slide1" class="right" data-idx="4">오른쪽</label>
+    </div>
+</body>
+
+</html>

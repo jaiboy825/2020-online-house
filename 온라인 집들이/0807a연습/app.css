@@ -1,0 +1,559 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  color: #767675;
+  text-decoration: none;
+}
+
+  /*헤더*/
+  header {
+    width: 100%;
+    height: 70px;
+    background-color: #191817;
+  }
+  .header {
+    width: 80%;
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+  }
+  .logoContainer {
+    width: 70px;
+    height: 70px;
+    cursor: pointer;
+  }
+  .logoContainer > img {
+    width: 70px;
+    height: 70px;
+    background-color: white;
+  }
+  .menuContainer {
+    margin-left: 200px;
+    width: 600px;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 100px 100px 100px 100px 100px;
+    grid-template-rows: 100%;
+    justify-content: space-between;
+    text-align: center;
+    line-height: 70px;
+  }
+  .menu {
+    transition: 0.4s;
+  }
+  .menu:hover {
+    color: #f2f2f2;
+  }
+  .lr {
+    margin-left: auto;
+    width: 200px;
+    height: 70px;
+    display: flex;
+    text-align: center;
+  }
+
+  .login,
+  .register {
+    width: 100px;
+    height: 70px;
+    line-height: 70px;
+    transition: 0.4s;
+  }
+  .login:hover {
+    color: #f2f2f2;
+  }
+  .register:hover {
+    color: #f2f2f2;
+  }
+  /*메인 슬라이더 화면*/
+  .mainContainer {
+    width: 100%;
+    height: 700px;
+    background-color: #3d3d3d;
+  }
+  .main {
+    position: relative;
+    width: 80%;
+    height: 100%;
+    margin: 0 auto;
+  }
+  /*슬라이더*/
+  .slide_input {
+    display: none;
+  }
+  .view {
+    position: relative;
+    width: 80%;
+    height: 100%;
+    margin: 0 auto;
+    overflow: hidden;
+  }
+  .controller label {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 50px;
+    cursor: pointer;
+  }
+  label.left {
+    left: 10px;
+  }
+  label.right {
+    right: 10px;
+  }
+  .slider {
+    position: absolute;
+    width: 300%;
+    height: 100%;
+    display: flex;
+  }
+  .slider > img {
+    width: calc(100% / 3);
+    height: 100%;
+    object-fit: cover;
+  }
+  .slider {
+    animation-duration: 8s;
+    animation-iteration-count: infinite;
+    animation-delay: calc(-8s + 0.4s);
+  }
+  .active1:checked ~ .view .slider {
+    animation-name: slide1;
+  }
+  .active2:checked ~ .view .slider {
+    animation-name: slide2;
+  }
+  .active3:checked ~ .view .slider {
+    animation-name: slide3;
+  }
+  .active4:checked ~ .view .slider {
+    animation-name: slide4;
+  }
+  @keyframes slide1 {
+    /*12321*/
+    0% {
+      left: 0%;
+    }
+    20% {
+      left: 0%;
+    }
+    25% {
+      left: -100%;
+    }
+    45% {
+      left: -100%;
+    }
+    50% {
+      left: -200%;
+    }
+    70% {
+      left: -200%;
+    }
+    75% {
+      left: -100%;
+    }
+    95% {
+      left: -100%;
+    }
+    100% {
+      left: 0%;
+    }
+  }
+  @keyframes slide2 {
+    /*23212*/
+    0% {
+      left: -100%;
+    }
+    20% {
+      left: -100%;
+    }
+    25% {
+      left: -200%;
+    }
+    45% {
+      left: -200%;
+    }
+    50% {
+      left: -100%;
+    }
+    70% {
+      left: -100%;
+    }
+    75% {
+      left: 0%;
+    }
+    95% {
+      left: 0%;
+    }
+    100% {
+      left: -100%;
+    }
+  }
+  @keyframes slide3 {
+    /*32123*/
+    0% {
+      left: -200%;
+    }
+    20% {
+      left: -200%;
+    }
+    25% {
+      left: -100%;
+    }
+    45% {
+      left: -100%;
+    }
+    50% {
+      left: 0%;
+    }
+    70% {
+      left: 0%;
+    }
+    75% {
+      left: -100%;
+    }
+    95% {
+      left: -100%;
+    }
+    100% {
+      left: -200%;
+    }
+  }
+  @keyframes slide4 {
+    /*21232*/
+    0% {
+      left: -100%;
+    }
+    20% {
+      left: -100%;
+    }
+    25% {
+      left: 0%;
+    }
+    45% {
+      left: 0%;
+    }
+    50% {
+      left: -100%;
+    }
+    70% {
+      left: -100%;
+    }
+    75% {
+      left: -200%;
+    }
+    95% {
+      left: -200%;
+    }
+    100% {
+      left: -100%;
+    }
+  }
+  .controller label {
+    animation-duration: 8s;
+    animation-iteration-count: infinite;
+  }
+  /*버튼 z index 애니메이션*/
+  .active1:checked ~ .controller label[data-idx="1"] {
+    animation-name: sl1;
+  }
+  .active1:checked ~ .controller label[data-idx="2"] {
+    animation-name: sl2;
+  }
+  .active1:checked ~ .controller label[data-idx="3"] {
+    animation-name: sl3;
+  }
+  .active1:checked ~ .controller label[data-idx="4"] {
+    animation-name: sl4;
+  }
+  /**/
+  .active2:checked ~ .controller label[data-idx="1"] {
+    animation-name: sl4;
+  }
+  .active2:checked ~ .controller label[data-idx="2"] {
+    animation-name: sl1;
+  }
+  .active2:checked ~ .controller label[data-idx="3"] {
+    animation-name: sl2;
+  }
+  .active2:checked ~ .controller label[data-idx="4"] {
+    animation-name: sl3;
+  }
+  /**/
+  .active3:checked ~ .controller label[data-idx="1"] {
+    animation-name: sl3;
+  }
+  .active3:checked ~ .controller label[data-idx="2"] {
+    animation-name: sl4;
+  }
+  .active3:checked ~ .controller label[data-idx="3"] {
+    animation-name: sl1;
+  }
+  .active3:checked ~ .controller label[data-idx="4"] {
+    animation-name: sl2;
+  }
+  /**/
+  .active4:checked ~ .controller label[data-idx="1"] {
+    animation-name: sl2;
+  }
+  .active4:checked ~ .controller label[data-idx="2"] {
+    animation-name: sl3;
+  }
+  .active4:checked ~ .controller label[data-idx="3"] {
+    animation-name: sl4;
+  }
+  .active4:checked ~ .controller label[data-idx="4"] {
+    animation-name: sl1;
+  }
+
+  @keyframes sl1 {
+    0% {
+      z-index: 2;
+    }
+    24.9% {
+      z-index: 2;
+    }
+    25.0% {
+      z-index: 0;
+    }
+    49.9% {
+      z-index: 0;
+    }
+    50.0% {
+      z-index: 0;
+    }
+    74.9% {
+      z-index: 0;
+    }
+    75.0% {
+      z-index: 0;
+    }
+    99.9% {
+      z-index: 0;
+    }
+    100% {
+      z-index: 2;
+    }
+  }
+
+  @keyframes sl2 {
+    0% {
+      z-index: 0;
+    }
+    24.9% {
+      z-index: 0;
+    }
+    25.0% {
+      z-index: 2;
+    }
+    49.9% {
+      z-index: 2;
+    }
+    50.0% {
+      z-index: 0;
+    }
+    74.9% {
+      z-index: 0;
+    }
+    75.0% {
+      z-index: 0;
+    }
+    99.9% {
+      z-index: 0;
+    }
+    100% {
+      z-index: 2;
+    }
+  }
+
+  @keyframes sl3 {
+    0% {
+      z-index: 0;
+    }
+    24.9% {
+      z-index: 0;
+    }
+    25.0% {
+      z-index: 0;
+    }
+    49.9% {
+      z-index: 0;
+    }
+    50.0% {
+      z-index: 2;
+    }
+    74.9% {
+      z-index: 2;
+    }
+    75.0% {
+      z-index: 0;
+    }
+    99.9% {
+      z-index: 0;
+    }
+    100% {
+      z-index: 2;
+    }
+  }
+
+  @keyframes sl4 {
+    0% {
+      z-index: 0;
+    }
+    24.9% {
+      z-index: 0;
+    }
+    25.0% {
+      z-index: 0;
+    }
+    49.9% {
+      z-index: 0;
+    }
+    50.0% {
+      z-index: 0;
+    }
+    74.9% {
+      z-index: 0;
+    }
+    75.0% {
+      z-index: 2;
+    }
+    99.9% {
+      z-index: 2;
+    }
+    100% {
+      z-index: 0;
+    }
+  }
+  /*온라인 집들이 구역*/
+  .onlineContainer {
+    width: 100%;
+    height: 800px;
+    background-color: #191817;
+  }
+  .online {
+    width: 80%;
+    height: 100%;
+    margin: 0 auto;
+  }
+  .onlineHead {
+    width: 100%;
+    height: 100px;
+    border-bottom: 1px solid #3d3d3d;
+  }
+  .onlineBody {
+    padding-top: 100px;
+    width: 100%;
+    height: 600px;
+    display: grid;
+    grid-template-columns: 30% 30% 30%;
+    grid-template-rows: 500px;
+    justify-content: space-around;
+  }
+  .onlines {
+    cursor: pointer;
+    width: 100%;
+    height: 100%;
+    border: 2px solid #767675;
+  }
+
+  .onlineImgContainer {
+    width: 80%;
+    height: 300px;
+    overflow: hidden;
+    margin: 0 auto;
+    margin-top: 20px;
+    display: flex;
+    position: relative;
+  }
+  .oiContainer {
+    position: absolute;
+    width: 200%;
+    height: 100%;
+  }
+  .oiContainer > img {
+    width: calc(100% / 2);
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+  }
+  .after {
+    position: absolute;
+    z-index: 2;
+    left: 100%;
+    transition: 0.4s;
+  }
+  .onlines:hover .after {
+    left: 0%;
+  }
+  /*전문가 영역*/
+  .specialContainer {
+    width: 100%;
+    height: 1000px;
+    background-color: #3d3d3d;
+  }
+  .special {
+    width: 80%;
+    margin: 0 auto;
+    height: 100%;
+  }
+  .specialHead {
+    width: 100%;
+    height: 100px;
+    border-bottom: 2px solid #191817;
+  }
+  .specialBody{
+    margin: 0 auto;
+    margin-top: 30px;
+    width: 80%;
+    height: 850px;
+    display: grid;
+    grid-template-columns: 30% 30%;
+    grid-template-rows: 400px 400px;
+    row-gap: 30px;
+    justify-content: space-around;
+  }
+  .specialist{
+    perspective: 2000px;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    border-radius: 10px;
+    transition: 0.7s;
+  }
+  .front{
+    width: 100%;
+    height: 100%;
+    transition: 0.7s;
+    border-radius: 10px;
+    position: absolute;
+    z-index: 3;
+  }
+  .front>img{
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    object-fit: cover;    
+  }
+  .back{
+    transition: 0.7s;
+    position: absolute;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.5);
+    transform: rotateY(-180deg);
+    backface-visibility: hidden;
+  }
+  .specialist:hover .front{
+    z-index: 2;
+    transform: rotateY(180deg);
+  }
+  .specialist:hover .back{
+    z-index:  3;
+    transform: rotateY(0deg);
+  }
